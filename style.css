@@ -48,6 +48,12 @@ a{
     background-color:red ;
 }
 #play-btn{
+    text-align: center;
     height:20px;
-    width:50px;
+    width:60px;
+}
+#restart{
+    text-align:center;
+    height:20px;
+    width:60px; 
 }
