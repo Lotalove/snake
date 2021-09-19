@@ -42,7 +42,7 @@ class game {
 
     end(){
        clearInterval(this.gameUpdate)
-       alert("You Lose")
+       alert("Nice Try")
     }
 }
 
@@ -110,11 +110,12 @@ class Player {
             if(snake.gamearr[block[0]][block[1]]!= undefined){
                 snake.gamearr[block[0]][block[1]].id = "player"
             }
-            else(snake.end)
+            else(snake.end())
         })
     }
     addBlock(){
         let newblock = [this.position[this.position.length-1][0]-1,this.position[this.position.length-1][1]]
+        console.log(newblock)
         this.position.push(newblock)
     }
 
@@ -141,9 +142,11 @@ let player = new Player();
 
 snake.start();
 player.generate()
-let btn = document.createElement("button")
-btn.addEventListener("click", () => { snake.init() })
-snake.game.insertBefore(btn, snake.game.firstChild)
-let score = document.createElement("p")
+let playBtn = document.getElementById("play-btn")
+playBtn.addEventListener("click", () => { snake.init() })
+
+let restartBtn = document.getElementById("restart")
+restartBtn.addEventListener("click",()=>{window.location.reload()})
+let score = document.getElementById("score")
 score.innerText= 0
-snake.game.insertBefore(score, snake.game.firstChild)
+

@@ -1,3 +1,31 @@
+body{
+    margin: 0;
+}
+#navbar{
+    margin: 0;
+    position: sticky;
+    top: 0;
+    background-color: #4A485A;
+    width: 100%;
+    height: 6vh;
+    min-height: 40px;
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 26px;
+    display: flex;
+    justify-content: end;
+    color: #FFFFFF ;
+    text-decoration: none;
+}
+ 
+.links{
+   padding-right: 15px;
+   
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
 #game{
     display: flex;    
     flex-direction: column;
@@ -19,7 +47,7 @@
 #food{
     background-color:red ;
 }
-button{
-    height:10px;
-    width:25px;
+#play-btn{
+    height:20px;
+    width:50px;
 }
